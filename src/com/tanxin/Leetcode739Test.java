@@ -18,4 +18,10 @@ public class Leetcode739Test {
         int[] res = lc.dailyTemperatures(nums);
         assertArrayEquals(res, new int[]{1, 1, 4, 2, 1, 1, 0, 0});
     }
+
+    @Test
+    public void dailyTemperatures2(){
+        int[] res = lc.dailyTemperatures(nums);
+        assertArrayEquals(res, new int[]{1, 1, 4, 2, 1, 1, 0, 0});
+    }
 }
