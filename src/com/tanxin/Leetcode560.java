@@ -22,6 +22,12 @@ public class Leetcode560 {
         return ans;
     }
 
+    /**
+     *
+     * @param nums
+     * @param k
+     * @return
+     */
     public int subarraySum2(int[] nums, int k) {
         int count = 0;
         int pre = 0;
@@ -36,7 +42,5 @@ public class Leetcode560 {
         }
         return count;
     }
-
-
 
 }
