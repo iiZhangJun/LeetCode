@@ -27,12 +27,11 @@ public class Leetcode15 {
                         temp.add(nums[left]);
                         temp.add(nums[right]);
                         ans.add(temp);
-                        left++;
-                        right--;
+                        left++;right--;
                         while (left<nums.length && nums[left]==nums[left-1]){       //去重
                             left++;
                         }
-                        while (nums[right]==nums[right-1]){   //去重
+                        while (right>0 && nums[right]==nums[right+1]){   //去重
                             right--;
                         }
                     }else if (nums[left]+nums[right]<target){
@@ -47,7 +46,7 @@ public class Leetcode15 {
     }
     //-4 -1 -1  -1 0 1 2 2
     public static void main(String[] args) {
-        int[] nums = new int[]{-1, 0, 1, 2, -1, -4,-1,2};
+        int[] nums = new int[]{-2,0,1,1,2};
         Leetcode15 lc = new Leetcode15();
         List<List<Integer>> ans = lc.threeSum(nums);
         for (List res:ans){
